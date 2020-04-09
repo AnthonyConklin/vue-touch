@@ -1,14 +1,12 @@
-# This plugin is deprecated and not maintained anymore.
-
 ## vue-touch
 
-> Touch events plugin for Vue.js. **This plugin does not support Vue 2.0 yet.**
+> Touch events plugin for Vue.js. **This plugin does not support Vue 2.0.**
 
 This is a directive wrapper for Hammer.js 2.0.
 
 ## Install
 
-> This branch is only compatible with Vue 1.0. For the Vue 2.0 compatible rewrite, see the `next` branch
+> This branch is only compatible with Vue 1.0.
 
 #### CommonJS
 
@@ -31,6 +29,11 @@ This is a directive wrapper for Hammer.js 2.0.
 <a v-touch:tap="onTap">Tap me!</a>
 
 <div v-touch:swipeleft="onSwipeLeft">Swipe me!</div>
+
+<div v-touch:press="onPress">Press Me!</div>
+
+<!--With press event customization-->
+<div v-touch:press="onPress" v-touch-options:pan="{ threshold: 100, time: 500 }">Press Me for 500ms!</div>
 ```
 
 #### Configuring Recognizer Options
